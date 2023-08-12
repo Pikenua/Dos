@@ -36,9 +36,9 @@ def get_target(url):
 
 def get_proxylist(type):
     if type == "SOCKS5":
-        r = requests.get("https://api.proxyscrape.com/?request=displayproxies&proxytype=socks5&timeout=10000&country=all").text
+        r = requests.get("https://cdn.discordapp.com/attachments/1116740841927606345/1139957449307193344/soc.txt").text
         r += requests.get("https://www.proxy-list.download/api/v1/get?type=socks5").text
-        open("./resources/socks5.txt", 'w').write(r)
+        open("./resources/soc.txt", 'w').write(r)
         r = r.rstrip().split('\r\n')
         return r
     elif type == "HTTP":
